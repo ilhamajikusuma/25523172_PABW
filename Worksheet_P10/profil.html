@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Halaman ini berisi daftar anime yang pernah saya tonton beserta rating saya."
+    />
+    <title>List Anime</title>
+
+    <link rel="stylesheet" href="token.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="komponen.css" />
+    <link rel="stylesheet" href="tema.css" />
+    <link rel="stylesheet" href="responsif.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <input type="checkbox" id="tema" class="pengalih-tema" />
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+
+        <div class="header-baris">
+          <h1>List Anime Yang Pernah Ditonton</h1>
+          <nav class="navbar" aria-label="Navigasi utama">
+            <ul>
+              <li><a href="#bagian-1">Anime 1</a></li>
+              <li><a href="#bagian-2">Anime 2</a></li>
+              <li><a href="#bagian-3">Anime 3</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="isi">
+        <aside class="sisi">
+          <h2>Tentang daftar ini</h2>
+          <p>
+            Anime yang pernah saya tonton, lengkap dengan season dan jumlah
+            episodenya.
+          </p>
+        </aside>
+
+        <div class="utama">
+          <section id="bagian-1">
+            <h2>List Anime</h2>
+
+            <div class="tabel-gulir">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Nomor</th>
+                    <th scope="col">Judul</th>
+                    <th scope="col">Season</th>
+                    <th scope="col">Episode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Wistoria Wand and Sword</td>
+                    <td>2</td>
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Dragon Ball Super</td>
+                    <td>1</td>
+                    <td>131</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>One Piece</td>
+                    <td>1</td>
+                    <td>1179</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="filter" aria-label="Filter kategori">
+              <button type="button" data-kategori="semua" class="aktif">
+                Semua
+              </button>
+              <button type="button" data-kategori="action">Action</button>
+              <button type="button" data-kategori="adventure">Adventure</button>
+              <button type="button" data-kategori="fantasy">Fantasy</button>
+              <button type="button" data-kategori="comedy">Comedy</button>
+              <button type="button" data-kategori="romance">Romance</button>
+            </div>
+
+            <p id="muat" hidden>Memuat data...</p>
+            <p id="galat" hidden role="alert"></p>
+            <p id="kosong" hidden>Belum ada data.</p>
+
+            <!-- Kartu dibuat oleh js/dom.js dari data/proyek.json -->
+            <div class="katalog" id="daftar"></div>
+          </section>
+
+          <section id="bagian-2">
+            <h2>Tambah Anime ke Daftar</h2>
+
+            <form id="form-anime" action="/simpan" method="post" novalidate>
+              <p class="form-kolom">
+                <label for="judul">Judul</label>
+                <input type="text" id="judul" name="judul" required />
+                <span id="galat-judul" class="galat" role="alert"></span>
+              </p>
+              <p class="form-kolom">
+                <label for="season">Season</label>
+                <input
+                  type="number"
+                  id="season"
+                  name="season"
+                  min="1"
+                  required
+                />
+                <span id="galat-season" class="galat" role="alert"></span>
+              </p>
+              <p class="form-kolom">
+                <label for="episode">Episode</label>
+                <input
+                  type="number"
+                  id="episode"
+                  name="episode"
+                  min="1"
+                  required
+                />
+                <span id="galat-episode" class="galat" role="alert"></span>
+              </p>
+              <button type="submit">Simpan</button>
+            </form>
+          </section>
+        </div>
+      </main>
+
+      <footer id="bagian-3">
+        <p>ILHAM AJI KUSUMA · 25523172 · 2026</p>
+      </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
