@@ -1,0 +1,247 @@
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+.form-kolom:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+form p {
+  margin: 0;
+}
+
+.tabel-gulir {
+  overflow-x: auto;
+}
+
+.katalog figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  min-width: 0;
+  min-height: 14rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: var(--card-pad);
+}
+
+.katalog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.katalog figcaption {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Pil kategori: baris filter dan chip di kartu */
+#filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#filter button,
+.chip {
+  padding: 0.25rem 0.9rem;
+  border: 1px solid #00bfff;
+  border-radius: 999px;
+  background: transparent;
+  color: #00bfff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+#filter button:hover,
+.chip:hover {
+  background: rgba(0, 191, 255, 0.15);
+}
+
+#filter button.aktif,
+.chip.aktif {
+  background: #00bfff;
+  color: #04121f;
+}
+
+#filter button:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid #00bfff;
+  outline-offset: 2px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  padding: 0.1rem 0.65rem;
+  font-size: 0.75rem;
+}
+
+#kosong {
+  margin: 0.5rem 0 1rem;
+  opacity: 0.8;
+}
+
+/* Pesan galat form */
+.galat {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.25rem;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}
+
+input[aria-invalid="true"] {
+  outline: 2px solid #ff6b6b;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.favorit {
+  width: auto;
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+}
+
+.baris-aksi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+button.favorit {
+  width: auto;
+  flex-shrink: 0;
+  background: none;
+  border: 0;
+  padding: 0 0.25rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.favorit:hover {
+  background: none;
+  opacity: 0.7;
+}
+
+button#atur-ulang {
+  width: auto;
+  padding: 0.2rem 0.65rem;
+  margin-block: 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+button#atur-ulang:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 0.6rem currentColor;
+}
+
+button#atur-ulang:active {
+  transform: scale(0.95);
+}
+
+button.favorit {
+  transition:
+    opacity 0.15s ease,
+    transform 0.1s ease;
+}
+
+button.favorit:hover {
+  background: none;
+  opacity: 0.7;
+  transform: scale(1.15);
+}
+
+button.favorit:active {
+  transform: scale(0.9);
+}
+
+button#atur-ulang:focus-visible,
+button.favorit:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

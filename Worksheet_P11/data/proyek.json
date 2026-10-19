@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "judul": "Wistoria Wand and Sword",
+    "season": 2,
+    "episode": 24,
+    "kategori": ["action", "fantasy"],
+    "gambar": "47b1d95eda9ab2962cdb174d95703fc6fe52e810b73f9654f5c3d3efe582d3d6.jpg",
+    "alt": "Gambar anime Wistoria Wand and Sword yang menampilkan karakter utama dengan latar belakang fantasi"
+  },
+  {
+    "id": 2,
+    "judul": "Dragon Ball Super",
+    "season": 1,
+    "episode": 131,
+    "kategori": ["action", "adventure", "fantasy"],
+    "gambar": "thumb-1920-772376.jpg",
+    "alt": "Gambar anime Dragon Ball Super yang menampilkan karakter utama dengan latar belakang aksi"
+  },
+  {
+    "id": 3,
+    "judul": "One Piece",
+    "season": 1,
+    "episode": 1179,
+    "kategori": ["action", "adventure", "fantasy", "comedy"],
+    "gambar": "One_Piece_Anime_Logo.webp",
+    "alt": "Logo anime One Piece yang menampilkan tulisan 'One Piece' dengan desain khas bajak lautnya"
+  }
+]
