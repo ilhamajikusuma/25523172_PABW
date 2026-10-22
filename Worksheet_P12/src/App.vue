@@ -5,7 +5,6 @@ import { state, muat, simpan, pulihkan, isiProyek } from "./state.js";
 import { ambilProyek } from "./api.js";
 
 import KepalaProfil from "./components/KepalaProfil.vue";
-import TombolFilter from "./components/TombolFilter.vue";
 import DaftarProyek from "./components/DaftarProyek.vue";
 import FormKontak from "./components/FormKontak.vue";
 
@@ -37,7 +36,6 @@ watch(state, (nilai) => simpan(nilai), { deep: true });
       </aside>
 
       <div class="utama">
-        <TombolFilter />
         <DaftarProyek />
         <FormKontak />
       </div>

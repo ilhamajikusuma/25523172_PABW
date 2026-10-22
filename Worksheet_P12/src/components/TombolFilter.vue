@@ -1,14 +1,18 @@
-<script setup></script>
+<script setup>
+import { state, pilihKategori } from "../state.js";
+
+const kategori = ["semua", "action", "adventure", "fantasy", "comedy", "romance"];
+</script>
 
 <template>
   <div id="filter" aria-label="Filter kategori">
-    <button type="button" data-kategori="semua" class="aktif">Semua</button>
-    <button type="button" data-kategori="action">Action</button>
-    <button type="button" data-kategori="adventure">Adventure</button>
-    <button type="button" data-kategori="fantasy">Fantasy</button>
-    <button type="button" data-kategori="comedy">Comedy</button>
-    <button type="button" data-kategori="romance">Romance</button>
+    <button
+      v-for="item in kategori"
+      :key="item"
+      type="button"
+      :class="{ aktif: state.kategoriAktif === item }"
+      :aria-pressed="state.kategoriAktif === item"
+      @click="pilihKategori(item)"
+    >{{ item === "semua" ? "Semua" : item }}</button>
   </div>
-
-  <button type="button" id="atur-ulang">Atur ulang</button>
 </template>

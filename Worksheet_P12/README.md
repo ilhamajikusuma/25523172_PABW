@@ -93,3 +93,24 @@ Deklarasi AI: Membantu semua pekerjaan seperti memahami worksheet jika tidak men
 
 Kerjakan sendiri: Keseluruhan saya kerjakan sendiri, AI membantu sedikit pekerjaan saya.
 Versi Node.js: v24.22.0, npm: 11.19.1
+
+---
+
+## Pertemuan 12
+
+### Versi perkakas
+
+- Node.js: v24.22.0
+- npm: 11.19.1
+
+### Ukuran sebelum dan sesudah build
+
+| Yang diukur                         | Sebelum build (`npm run dev`) | Sesudah build (`npm run preview`) |
+| ----------------------------------- | ----------------------------- | --------------------------------- |
+| Ukuran seluruh berkas yang dikirim  | 3,8 MB                        | 2,3 MB                            |
+| Jumlah berkas yang dikirim peramban | 38                            | 13                                |
+
+### Deklarasi AI
+
+- Dibantu AI: Memahami perintah worksheet, dan memmahami isi kode, dan peletakan kode.
+- Saya kerjakan sendiri: halaman P11 beserta CSS, data, dan gambar; memindahkan aset ke proyek Vue; menjalankan dev, build, dan preview; mengukur ukuran di DevTools;

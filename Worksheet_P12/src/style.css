@@ -294,3 +294,11 @@ code {
     border-right-color: var(--border);
   }
 }
+
+button,
+.tombol-atur-ulang {
+  width: auto !important;
+  max-width: 180px;
+  display: inline-block;
+  margin: 10px 0;
+}

@@ -12,13 +12,32 @@ export function pilihKategori(nilai) {
   state.kategoriAktif = nilai;
 }
 
+export function toggleFavorit(id) {
+  state.favorit = state.favorit.includes(id)
+    ? state.favorit.filter((favoritId) => favoritId !== id)
+    : [...state.favorit, id];
+}
+
+export function aturUlang() {
+  state.kategoriAktif = "semua";
+  state.favorit = [];
+}
+
 export function muat() {
-  const tersimpan = localStorage.getItem("proyek_app");
-  return tersimpan ? JSON.parse(tersimpan) : null;
+  try {
+    const tersimpan = localStorage.getItem("proyek_app");
+    return tersimpan ? JSON.parse(tersimpan) : null;
+  } catch {
+    return null;
+  }
 }
 
 export function simpan(data) {
-  localStorage.setItem("proyek_app", JSON.stringify(data));
+  try {
+    localStorage.setItem("proyek_app", JSON.stringify(data));
+  } catch {
+    // Aplikasi tetap dapat digunakan jika penyimpanan browser tidak tersedia.
+  }
 }
 
 export function pulihkan(data) {
